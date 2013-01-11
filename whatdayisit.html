@@ -1,0 +1,26 @@
+<html>
+<head>
+    <!--Load Jqueary and Moment-->
+    <script type="text/javascript" src="jqueary.js"></script>
+    <script type="text/javascript" src="moment.js"></script>
+    <link type="text/css" href="main.css" rel="stylesheet">
+    <script type="text/javascript">
+        var i = 0;
+        function refresh(){
+            var day = moment();
+            $("#day").text(day.format("dddd"));
+            i++;
+        }
+        window.onload = function(){
+            refresh()
+        };
+    </script>
+</head>
+<body>
+<p class="center">It is </p>
+<p class="large center" id="day">Test</p>
+<div class="center">
+<input type="button" class="button" onclick="refresh()" value="Update">
+</div>
+</body>
+</html>
